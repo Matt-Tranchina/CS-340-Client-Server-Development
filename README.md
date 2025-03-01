@@ -19,12 +19,13 @@ Switch to the admin database to create a new user.
 ```
 test> use admin
 switched to db admin
-admin> db.createUser({user:"USERNAME", pwd:"PASSWORD", roles:[{role:readWrite",db:"DATABASE"}]})
+admin> db.createUser({user:"USERNAME", pwd:"PASSWORD", roles:[{role:"readWrite",db:"DATABASE"}]})
 
 { ok: 1}
 admin>
 ```
 - The ```{ ok: 1}``` indicates the user creation was a success.
+- Replace ```"USERNAME"``` and ```"PASSWORD"``` with personal information and ```"DATABASE"``` with the database created.  
 3. **Next, use this Python code to communicate CRUD functionalities to the database by replacing the name of the class used to instantiate.**  
 ```python
 # @author: matthewtranch_snhu
@@ -51,7 +52,7 @@ class AnimalShelter(object):
 ```  
   
 4. **Finally, use the web-based dashboard to initiate the Python CRUD code with your Mongo Database.**
-- The code is listed in the Dash folder. The remained CRUD methods are located in the Python folder. The Dash application was used with Jupyter Notebook to run the dash code. Once loaded, the dash should look like the image below.
+- The code is listed in the ProjectTwoDashboard file. The remaining CRUD methods are located in the AnimalShelter.py file. The Dash application was used with Jupyter Notebook to run the Dash code. Once loaded, the Dash should look like the image below.
 ![1 Initial Dash](https://github.com/user-attachments/assets/41350fa0-99e4-4c2a-8aa6-bb165921d19d)
 The data is loaded into a datatable along with a pie chart displaying the different types of breeds in the displayed data. The map shows the geolocation of the selected document by selecting a single row from the datatable. Each column can be filtered, along with specific qualifications set by Grazioso Salvare. These options can be altered or removed within the Dash code. Selecting different data aspects (Water Rescue, Mountain or Wilderness Rescue, ...etc) will change the datatable and reload with the appropriate data set along with the appropriate pie chart and map.
 ## Roadmap  
